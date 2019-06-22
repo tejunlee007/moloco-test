@@ -22,19 +22,20 @@ def equalsWhenOneCharRemoved(str1, str2):
     return False
 
 
-# tests
-# case 1
-str1 = '{}{}{}{}'.format('a' * 6, 'b' * 5, 'c' * 4, 'd' * 3)
-str2 = '{}{}{}{}'.format('a' * 6, 'b' * 6, 'c' * 4, 'd' * 3)
-print(equalsWhenOneCharRemoved(str1, str2))
+if __name__ == '__main__':
+    # tests
+    # case 1
+    str1 = '{}{}{}{}'.format('a' * 6, 'b' * 5, 'c' * 4, 'd' * 3)
+    str2 = '{}{}{}{}'.format('a' * 6, 'b' * 6, 'c' * 4, 'd' * 3)
+    print(equalsWhenOneCharRemoved(str1, str2))
 
-# case 2
-str1 = '{}{}{}{}'.format('a' * 600000, 'b' * 500000, 'c' * 400000, 'd' * 300000)
-str2 = '{}{}{}{}'.format('a' * 600000, 'b' * 500001, 'c' * 400000, 'd' * 300000)
-print(equalsWhenOneCharRemoved(str1, str2))
+    # case 2
+    str1 = '{}{}{}{}'.format('a' * 600000, 'b' * 500000, 'c' * 400000, 'd' * 300000)
+    str2 = '{}{}{}{}'.format('a' * 600000, 'b' * 500001, 'c' * 400000, 'd' * 300000)
+    print(equalsWhenOneCharRemoved(str1, str2))
 
-# case 3
-str1 = '{}{}{}{}'.format('a' * 600000, 'b' * 500000, 'c' * 400002, 'd' * 300000)
-str2 = '{}{}{}{}'.format('a' * 600000, 'b' * 500000, 'c' * 400000, 'd' * 300000)
-print(equalsWhenOneCharRemoved(str1, str2))
+    # case 3
+    str1 = '{}{}{}{}'.format('a' * 600000, 'b' * 500000, 'c' * 400002, 'd' * 300000)
+    str2 = '{}{}{}{}'.format('a' * 600000, 'b' * 500000, 'c' * 400000, 'd' * 300000)
+    print(equalsWhenOneCharRemoved(str1, str2))
 
