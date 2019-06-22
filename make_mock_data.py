@@ -3,9 +3,9 @@ import random
 
 MIN_NUMBER = 1
 PURCHASE_NUMBER = 1000
-USER_NUMBER = 20
-PRODUCT_NUMBER = 100
-MAX_QUANTIRY = 50
+USER_NUMBER = 10
+PRODUCT_NUMBER = 10
+MAX_QUANTIRY = 100
 
 
 def make_product_sales_history_file():

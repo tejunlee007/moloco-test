@@ -33,10 +33,11 @@ def most_popular_products_by_total_sales_quantity():
         if purchase['product_id'] not in sale_quantity_by_product.keys():
             sale_quantity_by_product[purchase['product_id']] = 0
 
+        sale_quantity_by_product[purchase['product_id']] = sale_quantity_by_product[purchase['product_id']] + purchase['quantity']
+
         if not most_popular_products:
             most_popular_products.append(purchase['product_id'])
         else:
-            sale_quantity_by_product[purchase['product_id']] = sale_quantity_by_product[purchase['product_id']] + purchase['quantity']
             if sale_quantity_by_product[purchase['product_id']] > sale_quantity_by_product[most_popular_products[0]]:
                 most_popular_products.clear()
                 most_popular_products.append(purchase['product_id'])
