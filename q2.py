@@ -2,7 +2,7 @@ import json
 
 
 def most_popular_products_by_unique_num_of_users():
-    file = open('product_sales_history.txt', 'r')
+    file = open('sample_data_q2.txt', 'r')
     purchased_products = {}
     most_popular_products = []
     for line in file:
@@ -26,7 +26,7 @@ def most_popular_products_by_unique_num_of_users():
 
 
 def most_popular_products_by_total_sales_quantity():
-    file = open('product_sales_history.txt', 'r')
+    file = open('sample_data_q2.txt', 'r')
     sale_quantity_by_product_id = {}
     most_popular_products = []
     for line in file:
