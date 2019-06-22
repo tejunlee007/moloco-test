@@ -13,12 +13,6 @@ python q1.py
 ## q2.py
 this file contains two methods as follows:
 
-To make a mock data:
-```bash
-cd <project_folder>
-python make_mock_data.py
-```
-
 To run python file for question 2:
 ```bash
 cd <project_folder>
