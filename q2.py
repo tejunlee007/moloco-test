@@ -21,30 +21,32 @@ def most_popular_products_by_unique_num_of_users():
             elif len(purchased_products[purchase['product_id']]) == len(purchased_products[most_popular_products[0]]):
                 if purchase['product_id'] not in most_popular_products:
                     most_popular_products.append(purchase['product_id'])
+    file.close()
     return most_popular_products
 
 
 def most_popular_products_by_total_sales_quantity():
     file = open('product_sales_history.txt', 'r')
-    sale_quantity_by_product = {}
+    sale_quantity_by_product_id = {}
     most_popular_products = []
     for line in file:
         purchase = json.loads(line)
-        if purchase['product_id'] not in sale_quantity_by_product.keys():
-            sale_quantity_by_product[purchase['product_id']] = 0
+        if purchase['product_id'] not in sale_quantity_by_product_id.keys():
+            sale_quantity_by_product_id[purchase['product_id']] = 0
 
-        sale_quantity_by_product[purchase['product_id']] = sale_quantity_by_product[purchase['product_id']] + purchase['quantity']
+        sale_quantity_by_product_id[purchase['product_id']] = sale_quantity_by_product_id[purchase['product_id']] + purchase['quantity']
 
         if not most_popular_products:
             most_popular_products.append(purchase['product_id'])
         else:
-            if sale_quantity_by_product[purchase['product_id']] > sale_quantity_by_product[most_popular_products[0]]:
+            if sale_quantity_by_product_id[purchase['product_id']] > sale_quantity_by_product_id[most_popular_products[0]]:
                 most_popular_products.clear()
                 most_popular_products.append(purchase['product_id'])
-            elif sale_quantity_by_product[purchase['product_id']] == sale_quantity_by_product[most_popular_products[0]]:
+            elif sale_quantity_by_product_id[purchase['product_id']] == sale_quantity_by_product_id[most_popular_products[0]]:
                 if purchase['product_id'] not in most_popular_products:
                     most_popular_products.append(purchase['product_id'])
 
+    file.close()
     return most_popular_products
 
 

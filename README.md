@@ -11,13 +11,14 @@ python q1.py
 ```
 
 ## q2.py
-this file contains two methods as follows:
 
 To run python file for question 2:
 ```bash
 cd <project_folder>
 python q2.py
 ```
+
+this file contains two methods as follows:
 
 (1) Based on the unique number of users who purchased each product
 ```python
@@ -28,3 +29,13 @@ most_popular_product_by_unique_num_of_users()
 ```python
 most_popular_product_by_total_sales_quantity()
 ``` 
+
+
+## q3.py
+this file contains two methods as follows:
+
+To run python file for question 2:
+```bash
+cd <project_folder>
+python q3.py
+```
